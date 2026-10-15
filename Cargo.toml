@@ -1,0 +1,55 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/hs-geo",
+    "crates/hs-cache",
+    "crates/hs-ingest",
+    "crates/hs-lod",
+    "crates/hs-forge",
+    "crates/hs-camera",
+    "crates/hs-render",
+    "crates/hs-ui",
+    "crates/hs-app",
+]
+
+[workspace.dependencies]
+glam = "0.30"
+bytemuck = { version = "1", features = ["derive"] }
+anyhow = "1"
+pollster = "0.4"
+wgpu = "25"
+winit = { version = "0.30", default-features = false, features = ["x11", "rwh_06"] }
+egui = "0.32"
+egui-wgpu = "0.32"
+egui-winit = { version = "0.32", default-features = false, features = ["x11"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+ureq = { version = "2", default-features = false, features = ["native-tls"] }
+native-tls = "0.2"
+flate2 = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+sha2 = "0.10"
+laz = "0.13"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+hs-geo = { path = "crates/hs-geo" }
+hs-cache = { path = "crates/hs-cache" }
+hs-ingest = { path = "crates/hs-ingest" }
+hs-lod = { path = "crates/hs-lod" }
+hs-forge = { path = "crates/hs-forge" }
+hs-camera = { path = "crates/hs-camera" }
+hs-render = { path = "crates/hs-render" }
+hs-ui = { path = "crates/hs-ui" }
+
+[profile.dev]
+debug = 0
+
+[profile.dev.package.hs-forge]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+debug = 0

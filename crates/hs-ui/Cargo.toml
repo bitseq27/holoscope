@@ -1,0 +1,9 @@
+[package]
+name = "hs-ui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = { workspace = true }
+hs-forge = { workspace = true }
+hs-ingest = { workspace = true }

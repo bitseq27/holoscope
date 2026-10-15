@@ -1,0 +1,17 @@
+# HoloScope bench flythrough (plan Appendix D).
+# Run: scripts/bench.sh  (or: holoscope --headless --place "Kyoto, Japan" --extent 4 --vectors --bench bench/fly_kyoto.toml)
+[[segments]]
+name = "sky_to_street"
+from = { enu = [0, 0, 4200], look = [0, 0, 0] }
+to   = { enu = [350, -120, 60], look = [400, -90, 40] }
+duration_s = 10
+easing = "smoothstep"
+assert = { p99_frame_ms = 16.6 }
+
+[[segments]]
+name = "river_run"
+from = { enu = [350, -120, 60], look = [400, -90, 40] }
+to   = { enu = [1200, 600, 120], look = [900, 900, 60] }
+duration_s = 10
+easing = "smoothstep"
+assert = { p99_frame_ms = 16.6 }

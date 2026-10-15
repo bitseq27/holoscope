@@ -1,0 +1,16 @@
+[package]
+name = "hs-ingest"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hs-geo = { workspace = true }
+hs-cache = { workspace = true }
+ureq = { workspace = true }
+native-tls = { workspace = true }
+flate2 = { workspace = true }
+laz = { workspace = true }
+zip = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }

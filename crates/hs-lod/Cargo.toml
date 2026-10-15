@@ -1,0 +1,9 @@
+[package]
+name = "hs-lod"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hs-forge = { workspace = true }
+hs-geo = { workspace = true }
+glam = { workspace = true }

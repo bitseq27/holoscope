@@ -1,0 +1,9 @@
+[package]
+name = "hs-forge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hs-geo = { workspace = true }
+glam = { workspace = true }
+bytemuck = { workspace = true }

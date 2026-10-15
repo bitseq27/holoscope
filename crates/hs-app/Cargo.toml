@@ -1,0 +1,31 @@
+[package]
+name = "hs-app"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "holoscope"
+path = "src/main.rs"
+
+[dependencies]
+hs-geo = { workspace = true }
+hs-forge = { workspace = true }
+hs-cache = { workspace = true }
+hs-lod = { workspace = true }
+bytemuck = { workspace = true }
+hs-ingest = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+serde = { workspace = true }
+hs-camera = { workspace = true }
+hs-render = { workspace = true }
+hs-ui = { workspace = true }
+wgpu = { workspace = true }
+winit = { workspace = true }
+egui = { workspace = true }
+egui-wgpu = { workspace = true }
+egui-winit = { workspace = true }
+glam = { workspace = true }
+anyhow = { workspace = true }
+pollster = { workspace = true }
+image = { workspace = true }

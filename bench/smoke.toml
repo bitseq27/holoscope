@@ -1,0 +1,8 @@
+# sandbox smoke flythrough (llvmpipe): tiny frames, short segments
+[[segments]]
+name = "dive"
+from = { enu = [0, 0, 3000], look = [0, 0, 0] }
+to   = { enu = [300, -100, 80], look = [400, -60, 40] }
+duration_s = 2
+easing = "smoothstep"
+assert = { p99_frame_ms = 0 }
